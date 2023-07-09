@@ -52,6 +52,11 @@ if (myPrompt >= 10) {
 
 let i4 = 100;
 do {
-  console.log(i4);
+  // console.log(i4);
   i4++;
-} while (i4 <= 10);//100
+} while (i4 <= 10); //100
+
+// for each loop
+myArray.forEach(function (elem, ind) {
+  console.log(`element:${elem}, Index:${ind}`);
+});
