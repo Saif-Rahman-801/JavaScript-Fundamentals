@@ -36,17 +36,17 @@ while (i3 < myArray.length) {
 }
 
 // for vs while
-// let myPrompt = Number(prompt("Enter a Number:"));
+let myPrompt = Number(prompt("Enter a Number:"));
 // let myPrompt = parseInt(prompt("Enter a Number:"));
 // console.log(typeof myPrompt);
 
-/* while (myPrompt < 10) {
+while (myPrompt < 10) {
   alert("Please enter a larger number");
   myPrompt = Number(prompt("Enter a Number:"));
 }
 if (myPrompt >= 10) {
   alert("Congratulations");
-} */
+}
 
 // do while loop
 
@@ -66,6 +66,10 @@ for ([i, elem] of myArray.entries()) {
   // if (i === 2) break;
   if (i === 2) continue;
   // console.log(`Index:${i}, Element:${elem}`);
+}
+let numbers = [1, 2, 3, 4]
+for(let number of numbers){
+  console.log(number*2);
 }
 
 // for in loop
