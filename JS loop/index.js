@@ -18,19 +18,23 @@ for (let i = length - 1; i >= 0; i--) {
 
 let i = 0;
 while (i <= 10) {
-  console.log(i);
+  // console.log(i);
   i++;
 }
 
 let i2 = 10;
 while (i2 >= 0) {
-  console.log(i);
+  // console.log(i2);
   i2--;
 }
 
 // let myArray = ["one", "two", "three", "four", "five", "six"];
 let i3 = 0;
 while (i3 < myArray.length) {
-  console.log(myArray[i3]);
+  // console.log(myArray[i3]);
   i3++;
 }
+
+// for vs while
+let myPrompt = prompt("Enter a Number:");
+console.log(typeof myPrompt);
