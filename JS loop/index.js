@@ -65,5 +65,17 @@ myArray.forEach(function (elem, ind) {
 for ([i, elem] of myArray.entries()) {
   // if (i === 2) break;
   if (i === 2) continue;
-  console.log(`Index:${i}, Element:${elem}`);
+  // console.log(`Index:${i}, Element:${elem}`);
+}
+
+// for in loop
+
+let myobj = {
+  name: "Siaf",
+  age: 20,
+  city: "Chattogram",
+};
+
+for (property in myobj) {
+  console.log(`property:${property}, value:${myobj[property]}`);
 }
