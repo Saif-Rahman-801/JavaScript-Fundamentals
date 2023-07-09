@@ -36,5 +36,14 @@ while (i3 < myArray.length) {
 }
 
 // for vs while
-let myPrompt = prompt("Enter a Number:");
-console.log(typeof myPrompt);
+let myPrompt = Number(prompt("Enter a Number:"));
+// let myPrompt = parseInt(prompt("Enter a Number:"));
+// console.log(typeof myPrompt);
+
+while (myPrompt < 10) {
+  alert("Please enter a larger number");
+  myPrompt = Number(prompt("Enter a Number:"));
+}
+if (myPrompt >= 10) {
+  alert("Congratulations");
+}
