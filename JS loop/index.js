@@ -77,5 +77,27 @@ let myobj = {
 };
 
 for (property in myobj) {
-  console.log(`property:${property}, value:${myobj[property]}`);
+  // console.log(`property:${property}, value:${myobj[property]}`);
 }
+
+// execution time
+let num = 1000000;
+let newarr = new Array(num);
+
+console.time("for");
+for (let i = 0; i < num; i++) {}
+console.timeEnd("for");
+
+console.time("while");
+while (i < num) {
+  i++;
+}
+console.timeEnd("while");
+
+console.time("forEach");
+newarr.forEach((elem) => "");
+console.timeEnd("forEach");
+
+console.time("for...of");
+for (elem of newarr){}
+console.timeEnd("for...of");
