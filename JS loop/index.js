@@ -58,5 +58,12 @@ do {
 
 // for each loop
 myArray.forEach(function (elem, ind) {
-  console.log(`element:${elem}, Index:${ind}`);
+  // console.log(`element:${elem}, Index:${ind}`);
 });
+
+// for of loop
+for ([i, elem] of myArray.entries()) {
+  // if (i === 2) break;
+  if (i === 2) continue;
+  console.log(`Index:${i}, Element:${elem}`);
+}
