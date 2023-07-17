@@ -21,3 +21,9 @@ function helloUser(user = "Jhon Doe") {
   console.log(`hello ${user}`);
 }
 helloUser();
+
+const numbers = (num1, num2) => {
+  return num1 + num2;
+};
+const result = numbers(10, 10);
+console.log(result);
