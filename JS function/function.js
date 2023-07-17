@@ -27,3 +27,14 @@ const numbers = (num1, num2) => {
 };
 const result = numbers(10, 10);
 console.log(result);
+
+let work = function (a, b) {
+  console.log(a + b);
+};
+work(2, 4);
+
+const adder = (num1, num2) => num1 + num2;
+
+let result1 = adder(10, 20);
+let result2 = adder(11, 21);
+console.log(result1, result2);
