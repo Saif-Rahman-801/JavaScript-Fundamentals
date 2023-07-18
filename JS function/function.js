@@ -68,3 +68,36 @@ let calculatorResult = calculator.add(5, 5);
 console.log(calculatorResult);
 
 // Higher Order function
+const higherOrder = (func) => {
+  func();
+  func();
+};
+
+let hi = () => {
+  console.log("Hi you are Welcome");
+};
+
+let bye = () => {
+  console.log("Bye");
+}
+
+// higherOrder(hi);
+
+const repeatNum = (func, num) => {
+  for (let i = 0; i < num; i++) {
+    func();
+  }
+};
+
+repeatNum(hi, 2);
+
+const randomPick = (funcOne, funcTwo) => {
+  let randomNum = Math.random();
+  console.log(randomNum);
+  if (randomNum > 0.5) {
+    funcOne();
+  } else {
+    funcTwo();
+  }
+};
+randomPick(hi, bye)
