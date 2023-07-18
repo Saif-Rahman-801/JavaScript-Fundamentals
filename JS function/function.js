@@ -38,3 +38,33 @@ const adder = (num1, num2) => num1 + num2;
 let result1 = adder(10, 20);
 let result2 = adder(11, 21);
 console.log(result1, result2);
+
+let jog = (a, b) => {
+  return a + b;
+};
+
+let biyog = (c, d) => {
+  return c - d;
+};
+
+let gun = (e, f) => {
+  return e * f;
+};
+
+const calc = [jog, biyog, gun];
+
+for (let f of calc) {
+  let result = f(50, 10);
+  console.log(result);
+}
+
+const calculator = {
+  add: jog,
+  subtract: biyog,
+  multiply: gun,
+};
+
+let calculatorResult = calculator.add(5, 5);
+console.log(calculatorResult);
+
+// Higher Order function
