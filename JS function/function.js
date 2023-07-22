@@ -79,7 +79,7 @@ let hi = () => {
 
 let bye = () => {
   console.log("Bye");
-}
+};
 
 // higherOrder(hi);
 
@@ -100,4 +100,18 @@ const randomPick = (funcOne, funcTwo) => {
     funcTwo();
   }
 };
-randomPick(hi, bye)
+randomPick(hi, bye);
+
+function multiplyer(multiply) {
+  return function (x) {
+    return x * multiply;
+  };
+}
+
+const double = multiplyer(2);//const double = function (x){return x * 2}
+console.log(double(2));
+
+const triple = multiplyer(3);
+console.log(triple(4));
+
+// 
