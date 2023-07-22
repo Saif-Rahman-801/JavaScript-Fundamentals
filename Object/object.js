@@ -1,3 +1,5 @@
+let person = "address";
+let personTwo = "sayHello";
 const singlePerson = {
   name: "Saifur Rahman Sakib",
   address: "Chattogram",
@@ -8,3 +10,5 @@ const singlePerson = {
 
 console.log(singlePerson.name);
 singlePerson.sayHello();
+console.log(singlePerson[person]);
+console.log(singlePerson[personTwo]());
