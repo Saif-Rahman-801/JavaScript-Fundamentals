@@ -108,10 +108,20 @@ function multiplyer(multiply) {
   };
 }
 
-const double = multiplyer(2);//const double = function (x){return x * 2}
+const double = multiplyer(2); //const double = function (x){return x * 2}
 console.log(double(2));
 
 const triple = multiplyer(3);
 console.log(triple(4));
 
-// 
+// callback function
+
+function greetings() {
+  console.log(`Hello welcome, I am running inside another function`);
+}
+
+function HigherOrder(callback) {
+  callback();
+}
+
+HigherOrder(greetings);
