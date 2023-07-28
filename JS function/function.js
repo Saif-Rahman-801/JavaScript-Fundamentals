@@ -125,3 +125,31 @@ function HigherOrder(callback) {
 }
 
 HigherOrder(greetings);
+
+const calculation = (num1, num2, action) => {
+  if (action === "add") {
+    return num1 + num2;
+  } else if (action === "minus") {
+    return num1 - num2;
+  }
+};
+// console.log(calculation(10, 5, "add"));
+let calc2 = calculation(10, 5, "add");
+console.log(calc2);
+
+let add = (a, b) => {
+  return a + b;
+};
+let minus = (a, b) => {
+  return a - b;
+};
+let multiply = (a, b) => {
+  return a * b;
+};
+
+const calculationCallback = (num1, num2, callback) => {
+  return callback(num1, num2);
+};
+
+let calc3 = calculationCallback(10, 5, multiply);
+console.log(calc3);
