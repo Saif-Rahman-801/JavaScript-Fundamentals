@@ -55,3 +55,13 @@ const objTwo = {
 
 console.log(obj == objTwo);
 console.log({} == {});
+
+let consoler = {
+  loger: (a) => {
+      return a;
+  }
+}
+
+const ans = consoler.loger("Hi");
+
+console.log(ans);
