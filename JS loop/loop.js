@@ -68,9 +68,9 @@ for ([i, elem] of myArray.entries()) {
   if (i === 2) continue;
   // console.log(`Index:${i}, Element:${elem}`);
 }
-let numbers = [1, 2, 3, 4]
-for(let number of numbers){
-  console.log(number*2);
+let numbers = [1, 2, 3, 4];
+for (let number of numbers) {
+  console.log(number * 2);
 }
 
 // for in loop
@@ -104,5 +104,67 @@ newarr.forEach((elem) => "");
 console.timeEnd("forEach");
 
 console.time("for...of");
-for (elem of newarr){}
+for (elem of newarr) {
+}
 console.timeEnd("for...of");
+
+let number = 0;
+while (number <= 12) {
+  console.log(number);
+  number += 2;
+}
+
+for (let i = 0; i <= 12; i += 2) {
+  console.log(i);
+}
+
+let result = 1;
+let counter = 0;
+while (counter < 10) {
+  result = result * 2;
+  counter += 1;
+}
+console.log(result);
+
+const arr = ["bottle", "pen", "mouse", "Headphones"];
+
+if (arr[1] === "pen") {
+  arr.push("paper");
+  console.log(arr);
+} else {
+  console.log("check the array");
+}
+
+let func = () => {
+  console.log("hello");
+};
+
+console.log(typeof func);
+
+for (let i = 0; i <= 20; i++) {
+  if (i > 10) {
+    continue;
+  }
+  console.log(i);
+}
+
+const arr2 = ["bottle", "pen", "mouse", "Headphones"];
+
+for (let i = 0; i <= (arr2.length - 1); i++) {
+  let item = arr2[i];
+  if (item === "mouse") {
+    // break;
+    continue
+  }
+  console.log(arr2[i]);
+}
+
+let number3 = 0;
+while (number3 <= 10) {
+  console.log(number3);
+  number3++
+}
+
+
+
+
