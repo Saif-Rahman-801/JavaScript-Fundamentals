@@ -1,29 +1,12 @@
-const statastic = true;
+/* async function hello() {
+  return "Hello";
+} */
 
-// console.log("task1");
+/* const sayHello = async () => {
+  return "hello";
+};
 
-// promise definition
-const promise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    if (statastic) {
-      resolve("task2");
-    } else {
-      reject("failed");
-    }
-  }, 2000);
-});
-// promise call
-promise
-  .then((value) => {
-    // console.log(value);
-  })
-  .catch((err) => {
-    // console.log(err);
-  });
-
-// console.log("task3");
-
-// callback vs promise
+console.log(sayHello()); */
 
 const payment = true;
 const mark = 80;
@@ -60,16 +43,28 @@ const getCertificate = () => {
   console.log("Certificate processing!");
 
   const promise = Promise.resolve("Congrats! you are certified");
-  
+
   return promise;
 };
 
-enroll()
-  .then(progress)
-  .then(getCertificate)
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((err) => {
+// enroll()
+//   .then(progress)
+//   .then(getCertificate)
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+async function course() {
+ try{
+    await enroll();
+    await progress();
+    const message = await getCertificate();
+    console.log(message);
+ } catch(err){
     console.log(err);
-  });
+ }
+}
+course();
