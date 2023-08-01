@@ -23,7 +23,7 @@ const payment = true;
 const enroll = (callback) => {
   console.log("Enrollment processing");
   setTimeout(() => {
-    if (payment === true) {
+    if (payment) {
       callback();
     } else {
       console.log("Payment failed");
