@@ -58,10 +58,26 @@ console.log({} == {});
 
 let consoler = {
   loger: (a) => {
-      return a;
-  }
-}
+    return a;
+  },
+};
 
 const ans = consoler.loger("Hi");
 
 console.log(ans);
+
+const shoopingCart = {
+  books: 3,
+  sunglass: 4,
+  keyboard: "logitech",
+  mouse: 6,
+  pen: 8,
+};
+
+for (let property in shoopingCart) {
+  console.log(property);
+}
+
+const Objkeys = Object.keys(shoopingCart);
+const Objvalues = Object.values(shoopingCart);
+console.log(keys, values);
