@@ -38,5 +38,12 @@ const roundedD = Math.floor(number);
 
 for (let i = 0; i < 10; i++) {
   let random = Math.round(Math.random() * 6);
-  console.log(random);
+  // console.log(random);
 }
+
+const newArr = [12, 13, 14, 15, 16];
+
+const partial = newArr.splice(2, 3);
+const partialPush = newArr.splice(2, 3, 17, 18, 19);
+console.log(partial);
+console.log(newArr);
