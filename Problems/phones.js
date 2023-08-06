@@ -7,6 +7,7 @@ const phones = [
     price: 799.99,
     screenSize: "6.2 inches",
     releaseYear: 2021,
+    quantity: 10,
   },
   {
     brand: "Apple",
@@ -16,6 +17,7 @@ const phones = [
     price: 999.0,
     screenSize: "6.1 inches",
     releaseYear: 2022,
+    quantity: 5,
   },
   {
     brand: "Google",
@@ -25,6 +27,7 @@ const phones = [
     price: 699.0,
     screenSize: "6.4 inches",
     releaseYear: 2023,
+    quantity: 8,
   },
   {
     brand: "OnePlus",
@@ -34,6 +37,7 @@ const phones = [
     price: 899.99,
     screenSize: "6.7 inches",
     releaseYear: 2021,
+    quantity: 12,
   },
   {
     brand: "Xiaomi",
@@ -43,6 +47,7 @@ const phones = [
     price: 769.0,
     screenSize: "6.81 inches",
     releaseYear: 2021,
+    quantity: 15,
   },
   {
     brand: "Sony",
@@ -52,6 +57,7 @@ const phones = [
     price: 1199.0,
     screenSize: "6.5 inches",
     releaseYear: 2021,
+    quantity: 3,
   },
   {
     brand: "Huawei",
@@ -61,15 +67,19 @@ const phones = [
     price: 1199.0,
     screenSize: "6.6 inches",
     releaseYear: 2022,
+    quantity: 7,
   },
 ];
 
 function cheapest(phones) {
   let cheapestPhone = phones[0];
   let sum = 0;
+  let quantityBasedPrice = 0;
   for (let i = 0; i < phones.length; i++) {
     const singlePhone = phones[i];
-    sum = sum + singlePhone.price;
+    // sum = sum + singlePhone.price;
+    quantityBasedPrice = singlePhone.price * singlePhone.quantity;
+    sum = sum + quantityBasedPrice;
     // console.log(singlePhone);
     if (singlePhone.price < cheapestPhone.price) {
       cheapestPhone = singlePhone;
