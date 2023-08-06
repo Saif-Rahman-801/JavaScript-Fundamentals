@@ -23,4 +23,7 @@ function removeDuplicate(names) {
   return newNames;
 }
 
-console.log(removeDuplicate(arr));;
+console.log(removeDuplicate(arr));
+
+
+
