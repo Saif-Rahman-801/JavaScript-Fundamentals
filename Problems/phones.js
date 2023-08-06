@@ -66,14 +66,16 @@ const phones = [
 
 function cheapest(phones) {
   let cheapestPhone = phones[0];
+  let sum = 0;
   for (let i = 0; i < phones.length; i++) {
     const singlePhone = phones[i];
+    sum = sum + singlePhone.price;
     // console.log(singlePhone);
     if (singlePhone.price < cheapestPhone.price) {
       cheapestPhone = singlePhone;
     }
   }
-  return cheapestPhone;
+  return { cheapestPhone, sum };
 }
 
-console.log(cheapest(phones));;
+console.log(cheapest(phones));
