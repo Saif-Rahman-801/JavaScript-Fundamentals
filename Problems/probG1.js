@@ -60,4 +60,17 @@ function mindGame(pNum) {
     return calculationOne;
   }
 }
-console.log(mindGame(5));
+// console.log(mindGame(5));
+
+function isLGSeven(num) {
+  if (typeof num !== "number") {
+    return "please provide a number value";
+  } else {
+    if (num < 7) {
+      return num - 7;
+    } else {
+      return num * 2;
+    }
+  }
+}
+console.log(isLGSeven(-15));
