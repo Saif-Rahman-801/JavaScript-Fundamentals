@@ -58,4 +58,23 @@ const obj = {
   name: "Saif Rahman",
   age: 20,
 };
-console.log(printDetails(obj));
+// console.log(printDetails(obj));
+
+const photoArr = [".jpg", ".jpeg", ".png", ".gif", ".ico"];
+const isValidPhoto = (photoName, imageExtension) => {
+  if (typeof photoName !== "string" || !Array.isArray(imageExtension)) {
+    return "please provide string and array value";
+  } else {
+    for (let i = 0; i < imageExtension.length; i++) {
+      // console.log(i);
+      const index = imageExtension[i];
+      // console.log(index);
+      if (photoName.toLowerCase().endsWith(index.toLowerCase())) {
+        return true;
+      }
+    }
+    return false;
+  }
+};
+
+console.log(isValidPhoto("fish.JP", photoArr));
