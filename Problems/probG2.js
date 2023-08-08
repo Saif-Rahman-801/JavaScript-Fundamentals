@@ -77,4 +77,15 @@ const isValidPhoto = (photoName, imageExtension) => {
   }
 };
 
-console.log(isValidPhoto("fish.JP", photoArr));
+// console.log(isValidPhoto("fish.icoh", photoArr));
+
+//problem -  Get the prime number from an array and show a new arr of those prime numbers
+
+const recursion = (n) => {
+  if (n === 1) {
+    return 1;
+  } else {
+    return n + recursion(n - 1);
+  }
+};
+console.log(recursion(5));
