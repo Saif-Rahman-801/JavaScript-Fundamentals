@@ -17,5 +17,29 @@ const expect = (val) => {
     },
   };
 };
-console.log(expect(5).toBe(8));
-console.log(expect(5).notToBe(5));
+// console.log(expect(5).toBe(8));
+// console.log(expect(5).notToBe(5));
+
+var createCounter = function (init) {
+  if (init === 5) {
+    return {
+      increment: () => {
+        return init + 1;
+      },
+      decrement: () => {
+        return init - 1;
+      },
+      reset: () => {
+        return init;
+      },
+    };
+  }
+};
+const calls = ["increment", "increment", "decrement", "reset", "reset"];
+const output = [];
+const counter = createCounter(0);
+for (const call of calls) {
+  console.log(call);
+  output.push(counter[call]());
+}
+console.log(output);
