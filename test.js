@@ -32,9 +32,6 @@
     };
   }
 }; */
-
-const add = (num1, num2 = 2) => {
-  return num1 + num2;
-};
-
-console.log(add(1));
+const product = {name: 'Laptop', model:'Yoga 3', price:49000, dusk: '512SSD'}
+const {price} = product
+console.log(price);
